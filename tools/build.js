@@ -232,7 +232,17 @@ const seamJoin = (html) => html
   .replace(/<\/section>(\s*)<section/g, '</section>$1' + SEAM + '<section')
   .replace(/<\/header>(\s*)<section/g, '</header>$1' + SEAM + '<section');
 
-const page = ({ title, desc, pathname, body, cur, hero = false }) => `<!DOCTYPE html>
+// Root-relative URLs break on the github.io subpath preview; rewrite every
+// internal href/src to be depth-relative so the site works at / and /kellydevos/.
+const relativize = (html, pathname) => {
+  const depth = pathname === '/404' ? 0 : pathname.split('/').filter(Boolean).length;
+  const rel = depth ? '../'.repeat(depth) : './';
+  return html
+    .replace(/(href|src)="\/(?!\/)/g, (m, attr) => `${attr}="${rel}`)
+    .replace(/srcset="([^"]*)"/g, (m, v) => `srcset="${v.replace(/(^|,\s*)\//g, `$1${rel}`)}"`);
+};
+
+const page = ({ title, desc, pathname, body, cur, hero = false }) => relativize(`<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -259,7 +269,7 @@ ${FOOTER()}
 <script>${SCRIPT}</script>
 </body>
 </html>
-`;
+`, pathname);
 
 // ---------- pages ----------
 fs.mkdirSync(OUT, { recursive: true });
