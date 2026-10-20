@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Subscribe — Kelly deVos</title>
+<meta name="description" content="Sign up for Kelly deVos’s occasional author newsletter.">
+<meta property="og:title" content="Subscribe — Kelly deVos">
+<meta property="og:description" content="Sign up for Kelly deVos’s occasional author newsletter.">
+<meta property="og:url" content="https://www.kellydevos.com/subscribe/">
+<meta property="og:image" content="https://www.kellydevos.com/images/hero-portrait-900.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500&family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root { --paper:#ffffff; --ink:#191919; --band:#e9e7e4; --mid:#595959; color-scheme: light; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; background:var(--paper); color:var(--ink);
+  font: 18px/1.65 'Libre Caslon Text', Georgia, 'Times New Roman', serif; }
+h1,h2,h3 { font-family:'Libre Caslon Display','Libre Caslon Text',Georgia,serif; font-weight:400; letter-spacing:-0.01em; }
+a { color: inherit; }
+img { max-width:100%; }
+
+/* nav: floats on the hero, inverts over light bands */
+nav.site { position:fixed; inset:0 0 auto 0; z-index:20; display:flex; justify-content:center; gap:clamp(14px,3vw,34px);
+  padding:22px 16px; font-family:Archivo,Helvetica,Arial,sans-serif; font-size:13px; letter-spacing:.22em; text-transform:lowercase;
+  color:#fff; }
+nav.site.blend { mix-blend-mode:difference; }
+html:not(.js) nav.site { mix-blend-mode:difference; }
+body.no-hero nav.site { mix-blend-mode:difference; }
+nav.site a { color:inherit; text-decoration:none; padding-bottom:3px; border-bottom:1px solid transparent; }
+nav.site a:hover, nav.site a[aria-current] { border-bottom-color:currentColor; }
+body.no-hero nav.site { position:fixed; }
+
+main { display:block; }
+.band { padding: clamp(60px,9vw,120px) clamp(20px,6vw,72px); }
+.seam { height:14px; background:var(--ink); border-block:3px solid var(--paper); }
+.band.gray { background: var(--band); }
+.band.black { background: var(--ink); color: var(--paper); }
+.measure { max-width: 1060px; margin: 0 auto; }
+.prose { max-width: 62ch; }
+.prose p { margin: 0 0 1.2em; }
+.label { font-family:Archivo,Helvetica,Arial,sans-serif; font-size:12px; letter-spacing:.24em; text-transform:uppercase; color:var(--mid); }
+.pub, .by { font-family:Archivo,Helvetica,Arial,sans-serif; font-size:13px; letter-spacing:.02em; color:var(--mid); }
+.band.black .pub { color:#b5b5b5; }
+.band.black .label { color:#b5b5b5; }
+h2.display { font-size: clamp(2rem,4.4vw,3.2rem); margin:.2em 0 .6em; }
+
+/* hero */
+.hero { position:relative; height:100svh; min-height:560px; overflow:hidden; background:var(--ink); }
+.hero img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:62% 30%; filter:grayscale(1); }
+.hero .scrim { position:absolute; inset:0; background:linear-gradient(to top, rgba(10,10,10,.55) 0%, rgba(10,10,10,0) 45%); }
+.hero .title { position:absolute; left:clamp(20px,6vw,72px); bottom:clamp(28px,6vh,64px); color:#fff; }
+.hero .title h1 { font-size:clamp(3rem,7.5vw,6rem); margin:0; line-height:1.02; }
+.hero .title p { font-family:Archivo,Helvetica,Arial,sans-serif; font-size:13px; letter-spacing:.3em; text-transform:lowercase; margin:.9em 0 0; color:#e6e3de; }
+.hero .cue { position:absolute; left:50%; bottom:18px; transform:translateX(-50%); color:#fff; text-decoration:none; font-size:22px; line-height:1; padding:8px 14px; }
+.hero .cue:hover { transform:translateX(-50%) translateY(3px); }
+@media (prefers-reduced-motion: reduce) { .hero .cue:hover { transform:translateX(-50%); } }
+
+/* photo plate bands */
+.plate { padding:0; height:min(72vh,680px); overflow:hidden; position:relative; background:var(--ink); }
+.plate img { width:100%; height:100%; object-fit:cover; filter:grayscale(1); display:block; }
+
+/* books shelf (home) */
+.shelf { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:clamp(18px,3vw,40px); margin-top:2.4rem; }
+.shelf a { text-decoration:none; text-align:center; display:block; }
+.shelf img { width:100%; max-width:210px; border-radius:50%; filter:grayscale(1); transition:filter .12s ease-out, transform .12s ease-out; }
+.shelf a:hover img, .shelf a:focus-visible img { filter:none; transform:translateY(-4px); }
+.shelf .t { display:block; margin-top:1rem; font-size:1.02rem; font-style:italic; }
+.shelf .y { display:block; margin-top:.2rem; font-family:Archivo,sans-serif; font-size:11px; letter-spacing:.2em; color:#b5b5b5; }
+
+/* praise */
+.praise blockquote { margin:0 0 2.6rem; padding:0; }
+.praise .q { font-size:clamp(1.3rem,2.4vw,1.75rem); line-height:1.5; font-style:italic; max-width:28em; }
+.praise .by { margin-top:.9rem; }
+.praise .by { font-size:13px; }
+
+/* books page */
+.book { padding: clamp(60px,8vw,110px) clamp(20px,6vw,72px); }
+.book:nth-of-type(even) { background:var(--band); }
+.book .inner { max-width:1060px; margin:0 auto; display:grid; grid-template-columns:minmax(180px,260px) 1fr; gap:clamp(28px,5vw,64px); align-items:start; }
+.book img.cover { width:100%; border-radius:50%; filter:grayscale(1); transition:filter .12s ease-out; }
+.book:hover img.cover, .book:focus-within img.cover { filter:none; }
+.book h2 { font-size:clamp(1.9rem,3.6vw,2.8rem); margin:0 0 .25em; }
+.book .pub { margin:0 0 1.4rem; }
+.book details { margin:.4rem 0 1.6rem; }
+.book summary { cursor:pointer; font-family:Archivo,sans-serif; font-size:13px; letter-spacing:.04em; color:var(--mid); }
+.book summary:hover { color:var(--ink); }
+.linkrow { display:flex; flex-wrap:wrap; gap:.4rem 1.6rem; padding:0; margin:0 0 1rem; list-style:none;
+  font-family:Archivo,sans-serif; font-size:13px; letter-spacing:.03em; }
+.linkrow a { text-decoration:none; border-bottom:1px solid #00000033; padding-bottom:2px; }
+.linkrow a:hover { border-bottom-color:var(--ink); }
+.news { margin:.4rem 0 0; padding:0; list-style:none; }
+.news li { padding:.45rem 0; border-top:1px solid #00000014; }
+.news a { text-decoration:none; }
+.news a:hover em { border-bottom:1px solid var(--ink); }
+.news em { font-style:italic; }
+.news .src { font-family:Archivo,sans-serif; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--mid); margin-left:.6em; }
+
+/* media page */
+.presslist { margin:2rem 0 0; padding:0; list-style:none; max-width:46em; }
+.presslist li { padding:1.1rem 0; border-top:1px solid #00000018; }
+.presslist a { text-decoration:none; font-size:clamp(1.15rem,2vw,1.45rem); font-style:italic; line-height:1.5; }
+.presslist a:hover { border-bottom:1px solid var(--ink); }
+.presslist .src { display:block; margin-top:.3rem; text-transform:none; letter-spacing:.04em; }
+
+/* about */
+.about-grid { max-width:1060px; margin:0 auto; display:grid; grid-template-columns:minmax(220px,420px) 1fr; gap:clamp(28px,5vw,72px); align-items:start; }
+.about-grid img { width:100%; filter:grayscale(1); }
+
+/* contact */
+.doors { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:clamp(24px,4vw,56px); margin-top:2.2rem; }
+.doors h2 { font-size:1.3rem; margin:0 0 .6rem; font-family:'Libre Caslon Display',Georgia,serif; font-weight:400; }
+.doors ul { margin:0; padding:0; list-style:none; }
+.doors li { padding:.3rem 0; }
+.doors a { text-decoration:none; border-bottom:1px solid #00000033; }
+.doors a:hover { border-bottom-color:var(--ink); }
+
+/* cta band */
+.cta { text-align:center; }
+.cta .btn { display:inline-block; margin-top:1.8rem; font-family:Archivo,sans-serif; font-size:13px; letter-spacing:.24em; text-transform:uppercase;
+  color:var(--paper); border:1px solid var(--paper); padding:16px 34px; text-decoration:none; transition:background .2s ease-out,color .2s ease-out; }
+.cta .btn:hover { background:var(--paper); color:var(--ink); }
+
+footer.site { padding:46px clamp(20px,6vw,72px) 60px; border-top:1px solid #00000018; }
+footer.site .measure { display:flex; flex-wrap:wrap; gap:14px 36px; justify-content:space-between; align-items:baseline; }
+footer.site, footer.site a { font-family:Archivo,sans-serif; font-size:12.5px; letter-spacing:.02em; color:var(--mid); }
+footer.site a { text-decoration:none; border-bottom:1px solid #00000022; }
+footer.site a:hover { color:var(--ink); }
+
+/* reveal: one slow fade-up per band, first reveal only */
+html.js .reveal { opacity:0; transform:translateY(18px); transition:opacity .7s ease-out, transform .7s ease-out; }
+html.js .reveal.in { opacity:1; transform:none; }
+@media (prefers-reduced-motion: reduce) {
+  html.js .reveal { opacity:1; transform:none; transition:none; }
+  html { scroll-behavior:auto; }
+  .shelf img, .book img.cover { transition:none; }
+}
+:focus-visible { outline:2px solid var(--ink); outline-offset:3px; border-radius:2px; }
+.band.black :focus-visible, .hero :focus-visible, nav.site :focus-visible { outline-color:#fff; }
+::selection { background:var(--ink); color:var(--paper); }
+
+@media (max-width: 760px) {
+  .book .inner, .about-grid { grid-template-columns:1fr; }
+  .book img.cover { max-width:240px; }
+  .hero img { object-position:60% 22%; }
+  nav.site { gap:14px; font-size:12px; letter-spacing:.16em; }
+  .shelf { grid-template-columns:repeat(2,1fr); }
+  .shelf a:nth-child(5) { grid-column:1 / -1; max-width:230px; margin:0 auto; }
+}
+</style>
+</head>
+<body class="no-hero">
+<nav class="site" aria-label="Site">
+  <a href="/" >kelly deVos</a>
+  <a href="/about/" >about</a>
+  <a href="/my-books/" >books</a>
+  <a href="/media/" >media</a>
+  <a href="/contact-me/" >contact</a>
+</nav>
+<main>
+
+<section class="band" style="padding-top:clamp(110px,14vh,150px);min-height:52vh">
+  <div class="measure reveal">
+    <h1 class="display" style="font-size:clamp(2.2rem,4.6vw,3.4rem)">Occasional bookish news &amp;<br>body-positivity updates.</h1>
+    <div class="prose">
+      <p>Don&rsquo;t worry &mdash; it&rsquo;s not the least bit annoying.</p>
+      <p>The signup is getting a new home along with the rest of the site. Until it
+           lands, <a href="/contact-me/">say hello directly</a> or find Kelly on
+           <a href="https://www.instagram.com/kellydevos/">Instagram</a>.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="site">
+  <div class="measure reveal">
+    <span>&copy; 2026 Kelly deVos</span>
+    <span>Represented by <a href="https://zenoagency.com/">Zeno Literary Agency</a>, London</span>
+    <span><a href="https://www.instagram.com/kellydevos/">Instagram</a> &nbsp; <a href="https://twitter.com/KdeVosAuthor">Twitter / X</a> &nbsp; <a href="https://www.pinterest.com/kellydevos/">Pinterest</a> &nbsp; <a href="http://kellydevosauthor.tumblr.com">Tumblr</a></span>
+    
+  </div>
+</footer>
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+  var nav=document.querySelector('nav.site');
+  var hero=document.querySelector('.hero');
+  if(nav&&hero&&'IntersectionObserver' in window){
+    new IntersectionObserver(function(e){
+      nav.classList.toggle('blend', !e[0].isIntersecting);
+    },{rootMargin:'-40px 0px 0px 0px'}).observe(hero);
+  } else if(nav){ nav.classList.add('blend'); }
+  var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els=document.querySelectorAll('.reveal');
+  if(rm||!('IntersectionObserver' in window)){ els.forEach(function(el){el.classList.add('in');}); return; }
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+  },{threshold:.12});
+  els.forEach(function(el){ io.observe(el); });
+})();
+</script>
+</body>
+</html>

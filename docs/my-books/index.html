@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Books — Kelly deVos</title>
+<meta name="description" content="The five novels of Kelly deVos: Fat Girl on a Plane, Day Zero, Day One, Eat Your Heart Out, and Go Hunt Me — with where to buy each.">
+<meta property="og:title" content="Books — Kelly deVos">
+<meta property="og:description" content="The five novels of Kelly deVos: Fat Girl on a Plane, Day Zero, Day One, Eat Your Heart Out, and Go Hunt Me — with where to buy each.">
+<meta property="og:url" content="https://www.kellydevos.com/my-books/">
+<meta property="og:image" content="https://www.kellydevos.com/images/hero-portrait-900.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500&family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root { --paper:#ffffff; --ink:#191919; --band:#e9e7e4; --mid:#595959; color-scheme: light; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; background:var(--paper); color:var(--ink);
+  font: 18px/1.65 'Libre Caslon Text', Georgia, 'Times New Roman', serif; }
+h1,h2,h3 { font-family:'Libre Caslon Display','Libre Caslon Text',Georgia,serif; font-weight:400; letter-spacing:-0.01em; }
+a { color: inherit; }
+img { max-width:100%; }
+
+/* nav: floats on the hero, inverts over light bands */
+nav.site { position:fixed; inset:0 0 auto 0; z-index:20; display:flex; justify-content:center; gap:clamp(14px,3vw,34px);
+  padding:22px 16px; font-family:Archivo,Helvetica,Arial,sans-serif; font-size:13px; letter-spacing:.22em; text-transform:lowercase;
+  color:#fff; }
+nav.site.blend { mix-blend-mode:difference; }
+html:not(.js) nav.site { mix-blend-mode:difference; }
+body.no-hero nav.site { mix-blend-mode:difference; }
+nav.site a { color:inherit; text-decoration:none; padding-bottom:3px; border-bottom:1px solid transparent; }
+nav.site a:hover, nav.site a[aria-current] { border-bottom-color:currentColor; }
+body.no-hero nav.site { position:fixed; }
+
+main { display:block; }
+.band { padding: clamp(60px,9vw,120px) clamp(20px,6vw,72px); }
+.seam { height:14px; background:var(--ink); border-block:3px solid var(--paper); }
+.band.gray { background: var(--band); }
+.band.black { background: var(--ink); color: var(--paper); }
+.measure { max-width: 1060px; margin: 0 auto; }
+.prose { max-width: 62ch; }
+.prose p { margin: 0 0 1.2em; }
+.label { font-family:Archivo,Helvetica,Arial,sans-serif; font-size:12px; letter-spacing:.24em; text-transform:uppercase; color:var(--mid); }
+.pub, .by { font-family:Archivo,Helvetica,Arial,sans-serif; font-size:13px; letter-spacing:.02em; color:var(--mid); }
+.band.black .pub { color:#b5b5b5; }
+.band.black .label { color:#b5b5b5; }
+h2.display { font-size: clamp(2rem,4.4vw,3.2rem); margin:.2em 0 .6em; }
+
+/* hero */
+.hero { position:relative; height:100svh; min-height:560px; overflow:hidden; background:var(--ink); }
+.hero img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:62% 30%; filter:grayscale(1); }
+.hero .scrim { position:absolute; inset:0; background:linear-gradient(to top, rgba(10,10,10,.55) 0%, rgba(10,10,10,0) 45%); }
+.hero .title { position:absolute; left:clamp(20px,6vw,72px); bottom:clamp(28px,6vh,64px); color:#fff; }
+.hero .title h1 { font-size:clamp(3rem,7.5vw,6rem); margin:0; line-height:1.02; }
+.hero .title p { font-family:Archivo,Helvetica,Arial,sans-serif; font-size:13px; letter-spacing:.3em; text-transform:lowercase; margin:.9em 0 0; color:#e6e3de; }
+.hero .cue { position:absolute; left:50%; bottom:18px; transform:translateX(-50%); color:#fff; text-decoration:none; font-size:22px; line-height:1; padding:8px 14px; }
+.hero .cue:hover { transform:translateX(-50%) translateY(3px); }
+@media (prefers-reduced-motion: reduce) { .hero .cue:hover { transform:translateX(-50%); } }
+
+/* photo plate bands */
+.plate { padding:0; height:min(72vh,680px); overflow:hidden; position:relative; background:var(--ink); }
+.plate img { width:100%; height:100%; object-fit:cover; filter:grayscale(1); display:block; }
+
+/* books shelf (home) */
+.shelf { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:clamp(18px,3vw,40px); margin-top:2.4rem; }
+.shelf a { text-decoration:none; text-align:center; display:block; }
+.shelf img { width:100%; max-width:210px; border-radius:50%; filter:grayscale(1); transition:filter .12s ease-out, transform .12s ease-out; }
+.shelf a:hover img, .shelf a:focus-visible img { filter:none; transform:translateY(-4px); }
+.shelf .t { display:block; margin-top:1rem; font-size:1.02rem; font-style:italic; }
+.shelf .y { display:block; margin-top:.2rem; font-family:Archivo,sans-serif; font-size:11px; letter-spacing:.2em; color:#b5b5b5; }
+
+/* praise */
+.praise blockquote { margin:0 0 2.6rem; padding:0; }
+.praise .q { font-size:clamp(1.3rem,2.4vw,1.75rem); line-height:1.5; font-style:italic; max-width:28em; }
+.praise .by { margin-top:.9rem; }
+.praise .by { font-size:13px; }
+
+/* books page */
+.book { padding: clamp(60px,8vw,110px) clamp(20px,6vw,72px); }
+.book:nth-of-type(even) { background:var(--band); }
+.book .inner { max-width:1060px; margin:0 auto; display:grid; grid-template-columns:minmax(180px,260px) 1fr; gap:clamp(28px,5vw,64px); align-items:start; }
+.book img.cover { width:100%; border-radius:50%; filter:grayscale(1); transition:filter .12s ease-out; }
+.book:hover img.cover, .book:focus-within img.cover { filter:none; }
+.book h2 { font-size:clamp(1.9rem,3.6vw,2.8rem); margin:0 0 .25em; }
+.book .pub { margin:0 0 1.4rem; }
+.book details { margin:.4rem 0 1.6rem; }
+.book summary { cursor:pointer; font-family:Archivo,sans-serif; font-size:13px; letter-spacing:.04em; color:var(--mid); }
+.book summary:hover { color:var(--ink); }
+.linkrow { display:flex; flex-wrap:wrap; gap:.4rem 1.6rem; padding:0; margin:0 0 1rem; list-style:none;
+  font-family:Archivo,sans-serif; font-size:13px; letter-spacing:.03em; }
+.linkrow a { text-decoration:none; border-bottom:1px solid #00000033; padding-bottom:2px; }
+.linkrow a:hover { border-bottom-color:var(--ink); }
+.news { margin:.4rem 0 0; padding:0; list-style:none; }
+.news li { padding:.45rem 0; border-top:1px solid #00000014; }
+.news a { text-decoration:none; }
+.news a:hover em { border-bottom:1px solid var(--ink); }
+.news em { font-style:italic; }
+.news .src { font-family:Archivo,sans-serif; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--mid); margin-left:.6em; }
+
+/* media page */
+.presslist { margin:2rem 0 0; padding:0; list-style:none; max-width:46em; }
+.presslist li { padding:1.1rem 0; border-top:1px solid #00000018; }
+.presslist a { text-decoration:none; font-size:clamp(1.15rem,2vw,1.45rem); font-style:italic; line-height:1.5; }
+.presslist a:hover { border-bottom:1px solid var(--ink); }
+.presslist .src { display:block; margin-top:.3rem; text-transform:none; letter-spacing:.04em; }
+
+/* about */
+.about-grid { max-width:1060px; margin:0 auto; display:grid; grid-template-columns:minmax(220px,420px) 1fr; gap:clamp(28px,5vw,72px); align-items:start; }
+.about-grid img { width:100%; filter:grayscale(1); }
+
+/* contact */
+.doors { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:clamp(24px,4vw,56px); margin-top:2.2rem; }
+.doors h2 { font-size:1.3rem; margin:0 0 .6rem; font-family:'Libre Caslon Display',Georgia,serif; font-weight:400; }
+.doors ul { margin:0; padding:0; list-style:none; }
+.doors li { padding:.3rem 0; }
+.doors a { text-decoration:none; border-bottom:1px solid #00000033; }
+.doors a:hover { border-bottom-color:var(--ink); }
+
+/* cta band */
+.cta { text-align:center; }
+.cta .btn { display:inline-block; margin-top:1.8rem; font-family:Archivo,sans-serif; font-size:13px; letter-spacing:.24em; text-transform:uppercase;
+  color:var(--paper); border:1px solid var(--paper); padding:16px 34px; text-decoration:none; transition:background .2s ease-out,color .2s ease-out; }
+.cta .btn:hover { background:var(--paper); color:var(--ink); }
+
+footer.site { padding:46px clamp(20px,6vw,72px) 60px; border-top:1px solid #00000018; }
+footer.site .measure { display:flex; flex-wrap:wrap; gap:14px 36px; justify-content:space-between; align-items:baseline; }
+footer.site, footer.site a { font-family:Archivo,sans-serif; font-size:12.5px; letter-spacing:.02em; color:var(--mid); }
+footer.site a { text-decoration:none; border-bottom:1px solid #00000022; }
+footer.site a:hover { color:var(--ink); }
+
+/* reveal: one slow fade-up per band, first reveal only */
+html.js .reveal { opacity:0; transform:translateY(18px); transition:opacity .7s ease-out, transform .7s ease-out; }
+html.js .reveal.in { opacity:1; transform:none; }
+@media (prefers-reduced-motion: reduce) {
+  html.js .reveal { opacity:1; transform:none; transition:none; }
+  html { scroll-behavior:auto; }
+  .shelf img, .book img.cover { transition:none; }
+}
+:focus-visible { outline:2px solid var(--ink); outline-offset:3px; border-radius:2px; }
+.band.black :focus-visible, .hero :focus-visible, nav.site :focus-visible { outline-color:#fff; }
+::selection { background:var(--ink); color:var(--paper); }
+
+@media (max-width: 760px) {
+  .book .inner, .about-grid { grid-template-columns:1fr; }
+  .book img.cover { max-width:240px; }
+  .hero img { object-position:60% 22%; }
+  nav.site { gap:14px; font-size:12px; letter-spacing:.16em; }
+  .shelf { grid-template-columns:repeat(2,1fr); }
+  .shelf a:nth-child(5) { grid-column:1 / -1; max-width:230px; margin:0 auto; }
+}
+</style>
+</head>
+<body class="no-hero">
+<nav class="site" aria-label="Site">
+  <a href="/" >kelly deVos</a>
+  <a href="/about/" >about</a>
+  <a href="/my-books/" aria-current="page">books</a>
+  <a href="/media/" >media</a>
+  <a href="/contact-me/" >contact</a>
+</nav>
+<main>
+
+<section class="band" style="padding-bottom:clamp(20px,3vw,40px);padding-top:clamp(110px,14vh,150px)">
+  <div class="measure reveal">
+    <h1 class="display" style="font-size:clamp(2.2rem,4.6vw,3.4rem)">Five novels. Zero apologies.</h1>
+  </div>
+</section>
+<div class="seam" aria-hidden="true"></div><section class="book" id="fat-girl-on-a-plane">
+  <div class="inner reveal">
+    <img class="cover" src="/files/fgoap_circle.jpg" alt="Fat Girl on a Plane cover art" loading="lazy" width="490" height="490">
+    <div>
+      <h2>Fat Girl on a Plane</h2>
+      <p class="pub">Harlequin Teen · 2018</p>
+      <div class="prose"><p>An unforgettable novel, told in dual Fat and Skinny perspectives, about smart fashion, pursuing your dreams, and loving yourself.</p><p><br>High school senior Cookie Vonn’s post-graduation dreams include getting out of Phoenix, attending Parsons and becoming the next great fashion designer. But in the world of fashion, being fat is a cardinal sin. It doesn’t help that she’s constantly compared to her supermodel mother—and named after a dessert.</p></div>
+      <details><summary>Keep reading &darr;</summary><div class="prose" style="margin-top:1rem"><p><br>Thanks to her job at a fashion blog, Cookie scores a trip to New York to pitch her portfolio and appeal for a scholarship, but her plans are put on standby when she’s declared too fat too fly. Forced to turn to her BFF for cash, Cookie buys a second seat on the plane. She arrives in the city to find that she’s been replaced by the boss’s daughter, a girl who’s everything she’s not—ultrathin and superrich. Bowing to society’s pressure, she vows to lose weight, get out of the friend zone with her crush, and put her life on track.</p><p><br>Cookie expected sunshine and rainbows, but nothing about her new life is turning out like she planned. When the fashion designer of the moment offers her what she’s always wanted—an opportunity to live and study in New York—she finds herself in a world full of people more interested in putting women down than dressing them up. Her designs make waves, but her real dream of creating great clothes for people of all sizes seems to grow more distant by the day.</p><p><br>Will she realize that she’s always had the power to make her own dreams come true?</p></div></details>
+      <p class="label" style="margin:1.6rem 0 .5rem">Find it</p>
+      <ul class="linkrow"><li><a href="http://bit.ly/fatgirlonaplane">Amazon</a></li><li><a href="https://www.barnesandnoble.com/w/fat-girl-on-a-plane-kelly-devos/1125453908?ean=9780373212538">Barnes &amp; Noble</a></li><li><a href="https://www.bookdepository.com/Fat-Girl-on-Plane-Kelly-Devos/9780373212538">Book Depository</a></li><li><a href="https://www.changinghands.com/book/9780373212538">Changing Hands</a></li><li><a href="https://www.indiebound.org/book/9780373212538">Indiebound</a></li><li><a href="https://www.chapters.indigo.ca/en-ca/books/fat-girl-on-a-plane/9780373212538-item.html">Indigo</a></li></ul>
+      <p class="label" style="margin:1.6rem 0 .2rem">In the press</p>
+      <ul class="news"><li><a href="https://www.barnesandnoble.com/blog/teen/our-most-anticipated-june-2018-ya-books/"><em>30 of Our Most Anticipated June YA Books</em><span class="src">barnesandnoble.com</span></a></li><li><a href="https://www.barnesandnoble.com/blog/teen/21-anticipated-debuts-2018/"><em>21 of our Most Anticipated Debuts of 2018</em><span class="src">barnesandnoble.com</span></a></li><li><a href="https://www.rd.com/culture/best-summer-reads-of-all-time/"><em>50 Best Summer Reads of All Time</em><span class="src">rd.com</span></a></li><li><a href="https://www.bustle.com/p/the-new-book-you-need-to-read-this-summer-based-on-your-favorite-childhood-classic-9553077"><em>If you love 'The Rainbow Fish' read 'Fat Girl on a Plane' by Kelly DeVos</em><span class="src">bustle.com</span></a></li><li><a href="https://www.brit.co/unique-childrens-books-for-mothers-day/"><em>10 Unique Children’s Books That Celebrate All Types of Motherhood</em><span class="src">brit.co</span></a></li><li><a href="https://www.brit.co/new-young-adult-books-june-2018/"><em>12 New Young Adult Books to Add to Your Summer Reading List</em><span class="src">brit.co</span></a></li><li><a href="https://www.bitchmedia.org/article/bitchreads-june-2018-selections"><em>15 Books Feminists Should Read in June</em><span class="src">bitchmedia.org</span></a></li></ul>
+    </div>
+  </div>
+</section>
+<div class="seam" aria-hidden="true"></div><section class="book" id="day-zero">
+  <div class="inner reveal">
+    <img class="cover" src="/files/dz_circle.jpg" alt="Day Zero cover art" loading="lazy" width="490" height="490">
+    <div>
+      <h2>Day Zero</h2>
+      <p class="pub">Inkyard Press / HarperCollins · 2019</p>
+      <div class="prose"><p>Fans of Susan Beth Pfeffer’s Life As We Knew It series and Rick Yancey’s The 5th Wave series will cheer for this fast-paced, near-future thrill ride.</p><p><br>If you’re going through hell…keep going.</p></div>
+      <details><summary>Keep reading &darr;</summary><div class="prose" style="margin-top:1rem"><p><br>Seventeen-year-old coder Jinx Marshall grew up spending weekends drilling with her paranoid dad for a doomsday she’s sure will never come. She’s an expert on self-heating meal rations, Krav Maga and extracting water from a barrel cactus. Now that her parents are divorced, she’s ready to relax. Her big plans include making it to level 99 in her favorite MMORPG and spending her weekend with her new hunky stepbrother, Toby.</p><p><br>But all that disaster training comes in handy when an explosion traps her in a burning building. Stuck leading her headstrong stepsister, MacKenna, and her precocious little brother, Charles, to safety, Jinx gets them out alive only to discover the explosion is part of a pattern of violence erupting all over the country. Even worse, Jinx’s dad stands accused of triggering the chaos.</p><p><br>In a desperate attempt to evade paramilitary forces and vigilantes, Jinx and her siblings find Toby and make a break for Mexico. With seemingly the whole world working against them, they’ve got to get along and search for the truth about the attacks—and about each other. But if they can survive, will there be anything left worth surviving for?</p></div></details>
+      <p class="label" style="margin:1.6rem 0 .5rem">Find it</p>
+      <ul class="linkrow"><li><a href="https://www.amazon.com/Day-Zero-Survival-Code-Duology/dp/1335008489/ref=tmm_hrd_swatch_0?_encoding=UTF8&amp;qid=1537338318&amp;sr=8-1">Amazon</a></li><li><a href="https://www.barnesandnoble.com/w/day-zero-kelly-devos/1129468649?ean=9781335008480">Barnes &amp; Noble</a></li><li><a href="https://www.bookdepository.com/Day-Zero-Kelly-Devos/9781335008480?ref=grid-view&amp;qid=1537338413932&amp;sr=1-3">Book Depository</a></li><li><a href="http://bit.ly/CHDayZero">Changing Hands</a></li><li><a href="https://www.chapters.indigo.ca/en-ca/books/day-zero/9781335008480-item.html?ikwsec=Books&amp;ikwidx=3">Indigo</a></li><li><a href="http://bit.ly/IndieDayZero">Indiebound</a></li></ul>
+      
+    </div>
+  </div>
+</section>
+<div class="seam" aria-hidden="true"></div><section class="book" id="day-one">
+  <div class="inner reveal">
+    <img class="cover" src="/files/do_circle.jpg" alt="Day One cover art" loading="lazy" width="490" height="490">
+    <div>
+      <h2>Day One</h2>
+      <p class="pub">Inkyard Press / HarperCollins · 2020</p>
+      <div class="prose"><p>In the sequel to Day Zero, stepsisters Jinx and MacKenna must put aside their enmity and work together to rescue their little brother…and possibly save the world. A nonstop whirlwind of a read for fans of Marie Lu, Rick Yancey and Alexandra Bracken.</p><p><br>RULE ONE: THOSE WHO PANIC DON’T SURVIVE</p></div>
+      <details><summary>Keep reading &darr;</summary><div class="prose" style="margin-top:1rem"><p><br>IT’S AS TRUE NOW AS IT WAS THE DAY OUR WORLD EXPLODED INTO CHAOS</p><p><br>Jinx<br><br>Three months ago, all I wanted was to stay up late playing video games and pretending things were fine. But with my parents’ role in a massive political conspiracy exposed, I ended up on the run, desperate to rescue my little brother, Charles, from the clutches of The Opposition.</p><p><br>I used to hate my father’s obsession with disaster prepping. But as I fight my way across a war-torn country and into a secret military research facility with only my stepsister to count on, I realize that following Dr. Doomsday’s Guide for Ultimate Survival might be our only hope of surviving to see Charles again.</p><p><br>MacKenna<br><br>Once, I had it all. The right backstory. The right qualifications. But my life as a student journalist was destroyed forever in the explosions that triggered the country’s meltdown. Now I’m determined to help Jinx get our little brother back. But we also have to find our own reasons to survive. Somehow, I’ve become the first reporter of the new civil war. In a world where your story is your ultimate weapon, I have to become the toughest freedom fighter of all.</p></div></details>
+      <p class="label" style="margin:1.6rem 0 .5rem">Find it</p>
+      <ul class="linkrow"><li><a href="https://www.amazon.com/Day-One-Zero-Duology/dp/133509136X/ref=sr_1_5?dchild=1&amp;keywords=kelly+devos&amp;qid=1598425428&amp;sr=8-5">Amazon</a></li><li><a href="https://www.barnesandnoble.com/w/day-one-kelly-devos/1135634495?ean=9781335091369">Barnes &amp; Noble</a></li><li><a href="https://www.bookdepository.com/Day-One-Kelly-Devos/9781335091369?ref=grid-view&amp;qid=1598425585904&amp;sr=1-3">Book Depository</a></li><li><a href="https://www.changinghands.com/book/9781335091369">Changing Hands</a></li><li><a href="https://www.chapters.indigo.ca/en-ca/books/day-one/9781335091369-item.html?ikwid=kelly+devos&amp;ikwsec=Home&amp;ikwidx=2#algoliaQueryId=838e1fe7005b717f901922262bb8c543">Indigo</a></li><li><a href="https://www.indiebound.org/book/9781335091369">Indiebound</a></li></ul>
+      
+    </div>
+  </div>
+</section>
+<div class="seam" aria-hidden="true"></div><section class="book" id="eat-your-heart-out">
+  <div class="inner reveal">
+    <img class="cover" src="/files/eyho_circle.jpg" alt="Eat Your Heart Out cover art" loading="lazy" width="490" height="490">
+    <div>
+      <h2>Eat Your Heart Out</h2>
+      <p class="pub">Penguin Teen / Razorbill · 2021</p>
+      <div class="prose"><p>Shaun of the Dead meets Dumplin' in this bitingly funny YA thriller about a kickass group of teens battling a ravenous group of zombies.</p><p><br>In the next few hours, one of three things will happen.</p></div>
+      <details><summary>Keep reading &darr;</summary><div class="prose" style="margin-top:1rem"><p><br>1--We'll be rescued (unlikely)</p><p><br>2--We'll freeze to death (maybe)</p><p><br>3--We'll be eaten by thin and athletic zombies (odds: excellent) </p><p><br>Vivian Ellenshaw is fat, but she knows she doesn't need to lose weight, so she's none too happy to find herself forced into a weight-loss camp's van with her ex-best friend, Allie, a meathead jock who can barely drive, and the camp owner's snobby son. And when they arrive at Camp Featherlite at the start of the worst blizzard in the history of Flagstaff, Arizona, it's clear that something isn't right.</p><p><br>Vee barely has a chance to meet the other members of her pod, all who seem as unhappy to be at Featherlite as she does, when a camper goes missing down by the lake. Then she spots something horrifying outside in the snow. Something...that isn't human. Plus, the camp's supposed "miracle cure" for obesity just seems fishy, and Vee and her fellow campers know they don't need to be cured. Of anything.</p><p><br>Even worse, it's not long before Camp Featherlite's luxurious bungalows are totally overrun with zombies. What starts out as a mission to unravel the camp's secrets turns into a desperate fight for survival--and not all of the Featherlite campers will make it out alive.</p><p><br>A satirical blend of horror, body positivity, and humor, Kelly deVos's witty, biting novel proves that everyone deserves to feel validated, and taking down the evil enterprise determined to dehumanize you is a good place to start</p></div></details>
+      <p class="label" style="margin:1.6rem 0 .5rem">Find it</p>
+      <ul class="linkrow"><li><a href="https://www.amazon.com/gp/product/B08KPF5MML/ref=dbs_a_def_rwt_hsch_vapi_tkin_p1_i1">Amazon</a></li><li><a href="https://www.barnesandnoble.com/w/eat-your-heart-out-kelly-devos/1137831549?ean=9780593204825">Barnes &amp; Noble</a></li><li><a href="https://www.bookdepository.com/Eat-Your-Heart-Out-Kelly-deVos/9780593204825?ref=grid-view&amp;qid=1657748554109&amp;sr=1-1">Book Depository</a></li><li><a href="https://www.changinghands.com/book/9780593204825">Changing Hands</a></li><li><a href="https://www.chapters.indigo.ca/en-ca/books/eat-your-heart-out/9780593204825-item.html?ikwid=kelly+devos&amp;ikwsec=Home&amp;ikwidx=1#algoliaQueryId=135e14d6506a271fdc7aa543488041a7">Indigo</a></li><li><a href="https://www.indiebound.org/book/9780593204825">Indiebound</a></li></ul>
+      <p class="label" style="margin:1.6rem 0 .2rem">In the press</p>
+      <ul class="news"><li><a href="https://locusmag.com/2021/10/colleen-mondor-reviews-eat-your-heart-out-by-kelly-devos/"><em>Colleen Mondor Reviews Eat Your Heart Out</em><span class="src">locusmag.com</span></a></li><li><a href="https://www.themarysue.com/eat-your-heart-out-zombie-satire/"><em>Eat Your Heart Out Is a Horrifying Satire of ‘80s Teen Movies With a Fat Camp Twist</em><span class="src">themarysue.com</span></a></li><li><a href="https://bookriot.com/ya-books-about-fat-girls/"><em>YA BOOKS ABOUT FAT GIRLS KICKING BUTT</em><span class="src">bookriot.com</span></a></li><li><a href="https://www.popsugar.com/entertainment/best-new-ya-books-june-2021-48336185"><em>From Zombies to Modern Love Stories, These Are the Best YA Books of June</em><span class="src">popsugar.com</span></a></li><li><a href="https://thenerddaily.com/2021-anticipated-young-adult-book-releases/"><em>2021 YA Book Releases You Need To Have On Your TBR</em><span class="src">thenerddaily.com</span></a></li><li><a href="https://www.wired.com/gallery/books-summer-reading-recommendations-kids-teens-2021/"><em>WIRED's Ultimate Summer Reading List for Kids and Teens</em><span class="src">wired.com</span></a></li><li><a href="https://sites.google.com/view/ga-peach-book-award-for-teens/current-nominees?authuser=0"><em>Current Nominees</em><span class="src">sites.google.com</span></a></li></ul>
+    </div>
+  </div>
+</section>
+<div class="seam" aria-hidden="true"></div><section class="book" id="go-hunt-me">
+  <div class="inner reveal">
+    <img class="cover" src="/files/GHM_CIRCLE.jpg" alt="Go Hunt Me cover art" loading="lazy" width="490" height="490">
+    <div>
+      <h2>Go Hunt Me</h2>
+      <p class="pub">Penguin Teen / Razorbill · 2022</p>
+      <div class="prose"><p>For Dracula lovers and fans of Diana Urban’s All Your Twisted Secrets, this spine-tingling thriller follows seven horror buffs as their dream trip to a remote Romanian castle turns into a nightmare when they begin to be killed one by one.</p><p><br>Alex Rush is ready for the trip of a lifetime.</p></div>
+      <details><summary>Keep reading &darr;</summary><div class="prose" style="margin-top:1rem"><p><br>She and her friends have made some creepily awesome films together throughout high school, so with only a few months left before they go their separate ways for college, they’re determined to make the best one yet: an epic short film that reimagines the story of Dracula, filmed on location at a remote castle in Romania.</p><p><br>But when they get there, it’s not quite the majestic setting they planned for. Menacing weapons line the walls, the twisted halls are easy to get lost in, and with no connection to the outside world, the group is unexpectedly off the grid. After just a few hours spent under its roof, Alex and her friends have no trouble imagining how this dark, terrifying castle inspired one of the most enduring horror novels of all time.</p><p><br>Only soon they no longer have to use their imaginations to understand the location’s terrifying history—just as they get the film's first shot rolling, one of Alex’s friends disappears, and she’s nearly certain she saw a cloaked stranger lurking in the shadows. As more members of the group begin to meet an untimely demise, Alex is desperate to stop the bloodshed, even if it means facing a monster she never thought would be let loose.</p></div></details>
+      <p class="label" style="margin:1.6rem 0 .5rem">Find it</p>
+      <ul class="linkrow"><li><a href="https://www.amazon.com/gp/product/B09HRK9K6R/ref=dbs_a_def_rwt_hsch_vapi_tkin_p1_i0">Amazon</a></li><li><a href="https://www.barnesandnoble.com/w/go-hunt-me-kelly-devos/1140285397?ean=9780593204856">Barnes &amp; Noble</a></li><li><a href="https://www.bookdepository.com/Go-Hunt-Me-Kelly-Devos/9780593204856?ref=grid-view&amp;qid=1657749180864&amp;sr=1-2">Book Depository</a></li><li><a href="https://www.changinghands.com/book/9780593204856">Changing Hands</a></li><li><a href="https://www.chapters.indigo.ca/en-ca/books/go-hunt-me/9780593204856-item.html?ikwsec=Books&amp;ikwidx=2#algoliaQueryId=612e02089b547acf9e37b95c0b4cbad8">Indigo</a></li><li><a href="https://www.indiebound.org/book/9780593204856">Indiebound</a></li></ul>
+      
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="site">
+  <div class="measure reveal">
+    <span>&copy; 2026 Kelly deVos</span>
+    <span>Represented by <a href="https://zenoagency.com/">Zeno Literary Agency</a>, London</span>
+    <span><a href="https://www.instagram.com/kellydevos/">Instagram</a> &nbsp; <a href="https://twitter.com/KdeVosAuthor">Twitter / X</a> &nbsp; <a href="https://www.pinterest.com/kellydevos/">Pinterest</a> &nbsp; <a href="http://kellydevosauthor.tumblr.com">Tumblr</a></span>
+    
+  </div>
+</footer>
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+  var nav=document.querySelector('nav.site');
+  var hero=document.querySelector('.hero');
+  if(nav&&hero&&'IntersectionObserver' in window){
+    new IntersectionObserver(function(e){
+      nav.classList.toggle('blend', !e[0].isIntersecting);
+    },{rootMargin:'-40px 0px 0px 0px'}).observe(hero);
+  } else if(nav){ nav.classList.add('blend'); }
+  var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els=document.querySelectorAll('.reveal');
+  if(rm||!('IntersectionObserver' in window)){ els.forEach(function(el){el.classList.add('in');}); return; }
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+  },{threshold:.12});
+  els.forEach(function(el){ io.observe(el); });
+})();
+</script>
+</body>
+</html>

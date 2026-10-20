@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-20T00:00:00Z",
+  "title": "Design System: Kelly deVos — kellydevos.com",
+  "extensions": {
+    "colorMeta": {
+      "ink": { "role": "primary", "displayName": "Ink", "canonical": "#191919", "tonalRamp": ["oklch(15% 0 0)", "oklch(25% 0 0)", "oklch(37% 0 0)", "oklch(49% 0 0)", "oklch(61% 0 0)", "oklch(73% 0 0)", "oklch(85% 0 0)", "oklch(95% 0 0)"] },
+      "paper": { "role": "neutral", "displayName": "Paper", "canonical": "#ffffff", "tonalRamp": ["oklch(15% 0 0)", "oklch(27% 0 0)", "oklch(40% 0 0)", "oklch(53% 0 0)", "oklch(66% 0 0)", "oklch(79% 0 0)", "oklch(90% 0 0)", "oklch(100% 0 0)"] },
+      "warm-band": { "role": "neutral", "displayName": "Warm Band", "canonical": "#e9e7e4", "tonalRamp": ["oklch(16% 0.004 75)", "oklch(28% 0.004 75)", "oklch(40% 0.004 75)", "oklch(52% 0.004 75)", "oklch(64% 0.004 75)", "oklch(76% 0.004 75)", "oklch(88% 0.004 75)", "oklch(94% 0.004 75)"] },
+      "mid-gray": { "role": "neutral", "displayName": "Mid Gray", "canonical": "#595959", "tonalRamp": ["oklch(15% 0 0)", "oklch(26% 0 0)", "oklch(37% 0 0)", "oklch(46% 0 0)", "oklch(58% 0 0)", "oklch(70% 0 0)", "oklch(83% 0 0)", "oklch(95% 0 0)"] },
+      "silver-on-black": { "role": "neutral", "displayName": "Silver on Black", "canonical": "#b5b5b5", "tonalRamp": ["oklch(15% 0 0)", "oklch(27% 0 0)", "oklch(39% 0 0)", "oklch(51% 0 0)", "oklch(63% 0 0)", "oklch(76% 0 0)", "oklch(87% 0 0)", "oklch(95% 0 0)"] },
+      "hero-whisper": { "role": "neutral", "displayName": "Hero Whisper", "canonical": "#e6e3de", "tonalRamp": ["oklch(16% 0.005 80)", "oklch(28% 0.005 80)", "oklch(40% 0.005 80)", "oklch(52% 0.005 80)", "oklch(64% 0.005 80)", "oklch(76% 0.005 80)", "oklch(88% 0.005 80)", "oklch(93% 0.005 80)"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "The hero name only — 'Kelly deVos' in white on the full-bleed portrait." },
+      "headline": { "displayName": "Headline", "purpose": "Band h2s (h2.display) on all pages." },
+      "title": { "displayName": "Title", "purpose": "Interior page h1s with extra top padding under the fixed nav." },
+      "body": { "displayName": "Body", "purpose": "Libre Caslon Text prose at 62ch max; italic carries quotes and book titles." },
+      "label": { "displayName": "Label", "purpose": "Archivo tracked caps for section labels ('Find it', 'In the press'); mid-gray on light, #b5b5b5 on black." },
+      "nav": { "displayName": "Nav", "purpose": "Tracked-lowercase Archivo for the fixed nav and hero subtitle." }
+    },
+    "shadows": [],
+    "motion": [
+      { "name": "hover-quick", "value": "120ms ease-out", "purpose": "Grayscale-to-color cover lift and -4px translateY on shelf hover/focus." },
+      { "name": "hover-fill", "value": "200ms ease-out", "purpose": "CTA button paper-fill and ink-text swap on hover." },
+      { "name": "reveal", "value": "700ms ease-out", "purpose": "One fade-up (opacity + 18px rise) per band, first intersection only, gated on html.js; disabled under prefers-reduced-motion." }
+    ],
+    "breakpoints": [
+      { "name": "mobile", "value": "760px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Site Nav",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Fixed top-center tracked-lowercase links; solid white over the hero, mix-blend-mode: difference after (IO-toggled .blend; difference by default under no-JS and on hero-less pages).",
+      "html": "<nav class=\"ds-nav\" style=\"background:#191919\"><a href=\"#\">kelly deVos</a><a href=\"#\" aria-current=\"page\">about</a><a href=\"#\">books</a><a href=\"#\">media</a><a href=\"#\">contact</a></nav>",
+      "css": ".ds-nav { display:flex; justify-content:center; gap:34px; padding:22px 16px; font-family:Archivo,Helvetica,Arial,sans-serif; font-size:13px; letter-spacing:.22em; text-transform:lowercase; color:#fff; } .ds-nav a { color:inherit; text-decoration:none; padding-bottom:3px; border-bottom:1px solid transparent; } .ds-nav a:hover, .ds-nav a[aria-current] { border-bottom-color:currentColor; } .ds-nav a:focus-visible { outline:2px solid #fff; outline-offset:3px; border-radius:2px; }"
+    },
+    {
+      "name": "CTA Button (on black)",
+      "kind": "button",
+      "refersTo": "button-cta",
+      "description": "The system's only button: paper-bordered ghost on black bands; fills paper with ink text on hover.",
+      "html": "<div class=\"ds-cta-band\"><a class=\"ds-btn-cta\" href=\"#\">Sign up</a></div>",
+      "css": ".ds-cta-band { background:#191919; padding:32px; text-align:center; } .ds-btn-cta { display:inline-block; font-family:Archivo,sans-serif; font-size:13px; letter-spacing:.24em; text-transform:uppercase; color:#ffffff; border:1px solid #ffffff; padding:16px 34px; text-decoration:none; transition:background .2s ease-out,color .2s ease-out; } .ds-btn-cta:hover { background:#ffffff; color:#191919; } .ds-btn-cta:focus-visible { outline:2px solid #fff; outline-offset:3px; border-radius:2px; }"
+    },
+    {
+      "name": "Band Seam",
+      "kind": "custom",
+      "description": "The two-tone seam between every pair of top-level bands: 14px ink bar with 3px paper border-block. aria-hidden structural device.",
+      "html": "<div class=\"ds-seam-demo\"><div class=\"ds-band-a\"></div><div class=\"ds-seam\" aria-hidden=\"true\"></div><div class=\"ds-band-b\"></div></div>",
+      "css": ".ds-band-a { height:36px; background:#ffffff; } .ds-band-b { height:36px; background:#e9e7e4; } .ds-seam { height:14px; background:#191919; border-block:3px solid #ffffff; }"
+    },
+    {
+      "name": "Book Cover (shelf)",
+      "kind": "card",
+      "refersTo": "book-cover",
+      "description": "Circular cover crop resting in grayscale; hover/focus lifts to full color and rises 4px in 120ms — the only chromatic moment in the system.",
+      "html": "<a class=\"ds-shelf-item\" href=\"#\"><span class=\"ds-cover\" role=\"img\" aria-label=\"Cover art\"></span><span class=\"ds-t\">Go Hunt Me</span><span class=\"ds-y\">2022</span></a>",
+      "css": ".ds-shelf-item { display:inline-block; text-align:center; text-decoration:none; background:#191919; padding:24px; color:#ffffff; font-family:'Libre Caslon Text',Georgia,serif; } .ds-cover { display:block; width:140px; height:140px; border-radius:50%; background:radial-gradient(circle at 35% 30%, #c0392b, #2c3e50); filter:grayscale(1); transition:filter .12s ease-out, transform .12s ease-out; } .ds-shelf-item:hover .ds-cover, .ds-shelf-item:focus-visible .ds-cover { filter:none; transform:translateY(-4px); } .ds-t { display:block; margin-top:1rem; font-size:1.02rem; font-style:italic; } .ds-y { display:block; margin-top:.2rem; font-family:Archivo,sans-serif; font-size:11px; letter-spacing:.2em; color:#b5b5b5; }"
+    },
+    {
+      "name": "Label",
+      "kind": "chip",
+      "refersTo": "label",
+      "description": "Archivo tracked-caps micro-heading in mid-gray; the only uppercase type in the system.",
+      "html": "<p class=\"ds-label\">In the press</p>",
+      "css": ".ds-label { font-family:Archivo,Helvetica,Arial,sans-serif; font-size:12px; letter-spacing:.24em; text-transform:uppercase; color:#595959; margin:0; }"
+    },
+    {
+      "name": "Praise Quote",
+      "kind": "custom",
+      "description": "Bare blockquote: italic Caslon at reading-plus scale with an Archivo mid-gray attribution; no card, no rule, no quote glyph decoration.",
+      "html": "<blockquote class=\"ds-praise\"><p class=\"ds-q\">“In this gripping tale of heart and adventure, deVos propels her characters into a breathless quest.”</p><p class=\"ds-by\">Laura Taylor Namey, New York Times bestselling author · on <em>Day Zero</em></p></blockquote>",
+      "css": ".ds-praise { margin:0; padding:24px; background:#e9e7e4; color:#191919; } .ds-q { font-family:'Libre Caslon Text',Georgia,serif; font-size:1.4rem; line-height:1.5; font-style:italic; max-width:28em; margin:0; } .ds-by { margin:.9rem 0 0; font-family:Archivo,Helvetica,Arial,sans-serif; font-size:13px; letter-spacing:.02em; color:#595959; }"
+    },
+    {
+      "name": "Hairline Link",
+      "kind": "custom",
+      "description": "The link affordance outside running prose: no text-decoration, 1px translucent-ink bottom border darkening to ink on hover; press/news titles are Caslon italic. Prose links keep the native underline.",
+      "html": "<p class=\"ds-linkwrap\"><a class=\"ds-link\" href=\"#\"><em>How Body Positivity Changed My Writing</em><span class=\"ds-src\">nytimes.com</span></a></p>",
+      "css": ".ds-linkwrap { background:#ffffff; padding:16px; margin:0; font-family:'Libre Caslon Text',Georgia,serif; } .ds-link { color:#191919; text-decoration:none; border-bottom:1px solid #00000033; padding-bottom:2px; font-size:1.2rem; } .ds-link:hover { border-bottom-color:#191919; } .ds-link em { font-style:italic; } .ds-src { font-family:Archivo,sans-serif; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:#595959; margin-left:.6em; } .ds-link:focus-visible { outline:2px solid #191919; outline-offset:3px; border-radius:2px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Monochrome Editorial",
+    "overview": "The photographs are the site; everything else is typography that stays out of their way. The whole world is built from four materials: paper white, near-black ink, one warm gray band tone, and five full-bleed black-and-white photographs. Pages read as a vertical stack of tone bands — white, warm gray, black, photo plate — separated by a thick ink seam, like signatures in a bound book. There is no chrome: no cards, no shadows, no boxes, no rounded containers. Structure is conveyed entirely by band color, hairline rules, and generous Caslon set big and unafraid.\n\nColor is deliberately absent. The only chromatic pixels on any page are the five book covers themselves, and even those rest in grayscale until a hover or focus lifts them to full color (120ms). The refused arrangement is the incumbent author-site formula: headshot-left/intro-right card stacks, teal accents, and any multi-color \"fun YA\" skin.",
+    "keyCharacteristics": [
+      "True monochrome: #ffffff / #191919 / #e9e7e4 / #595959 and nothing else",
+      "Full-bleed grayscale photo plates as structural section breaks",
+      "Enormous Libre Caslon Display against tracked-lowercase Archivo UI type",
+      "14px ink seam (3px paper border-block) between every top-level band",
+      "Flat, square, shadowless; depth comes from tone inversion, not elevation",
+      "Quiet motion: one fade-up per band on first reveal, 120ms hovers, nothing animates on navigation"
+    ],
+    "rules": [
+      { "name": "The Covers-Only Color Rule", "body": "Zero chromatic accents anywhere. The only color on any page comes from the five book covers, and only on hover/focus — covers rest at filter: grayscale(1) and lift to full color in 120ms. No new surface may introduce an accent color.", "section": "colors" },
+      { "name": "The Grayscale Plate Rule", "body": "Every photograph ships through filter: grayscale(1) in CSS, full-bleed, with no border, caption box, or overlay other than the hero's bottom scrim (linear-gradient(to top, rgba(10,10,10,.55), transparent 45%)).", "section": "colors" },
+      { "name": "The Italic Title Rule", "body": "Book and article titles are set in Caslon italic, never bold, never quoted with color. Praise quotes are italic Caslon at reading scale.", "section": "typography" },
+      { "name": "The Lowercase Nav Rule", "body": "Navigation and the hero subtitle are text-transform: lowercase tracked Archivo; only .label uses uppercase. Headings are never uppercased and never exceed weight 400.", "section": "typography" },
+      { "name": "The Seam Rule", "body": "Every junction between top-level bands carries the two-tone seam: a 14px --ink bar with border-block: 3px solid var(--paper), aria-hidden. Hairline rules (translucent ink) live only inside bands; the thick seam lives only between them.", "section": "layout" },
+      { "name": "The Flat Ink Rule", "body": "Surfaces never float. If a new element needs emphasis, invert its band tone or enlarge its type; do not add a shadow, gradient (beyond the hero scrim), or border box.", "section": "elevation" },
+      { "name": "The Difference Nav Rule", "body": "Once the hero scrolls past (IntersectionObserver toggles .blend, rootMargin -40px), the nav switches to mix-blend-mode: difference, flipping white/ink as bands pass beneath it. Pages without a hero (body.no-hero) and no-JS (html:not(.js)) run in difference mode from load.", "section": "components" },
+      { "name": "The One Reveal Rule", "body": "Exactly one fade-up (opacity + 18px translateY, 700ms ease-out) per band, on first intersection only (threshold .12, unobserved after firing), gated on html.js. No-JS and prefers-reduced-motion render everything in place; reduced motion also disables smooth scroll and cover transitions.", "section": "components" }
+    ],
+    "dos": [
+      "Do separate every pair of top-level bands with the seam (14px --ink, border-block: 3px solid var(--paper), aria-hidden=\"true\").",
+      "Do ship every photograph full-bleed and grayscale via CSS (filter: grayscale(1)), letting hover/focus restore color only on book covers.",
+      "Do set all headings in Libre Caslon Display at weight 400 with -0.01em tracking, and all UI micro-type in Archivo at 11–13px with .14–.3em tracking.",
+      "Do gate reveals on html.js and honor prefers-reduced-motion; the no-JS page must be complete and legible with the nav in difference mode.",
+      "Do keep config-gated slots (email, newsletterUrl, photoCredit, domain in site.config.json) rendering nothing until filled — no placeholders."
+    ],
+    "donts": [
+      "Don't introduce any chromatic color: no accents, no tinted links, no colored states. Ink/paper/warm-band/mid is the entire palette.",
+      "Don't add shadows, cards, rounded containers, or gradients beyond the hero scrim; emphasis comes from band inversion and type scale.",
+      "Don't animate on navigation or add per-element stagger; one fade-up per band, first reveal only.",
+      "Don't use bold weights or uppercase headings; italics carry titles. Outside running prose, use border-bottom link affordance, not text-decoration."
+    ]
+  }
+}
