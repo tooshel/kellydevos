@@ -22,7 +22,8 @@ Sheldon both edit this repo; GitHub Pages serves it from main).
 
 ## Product Purpose
 
-Author site for Kelly deVos, young adult novelist (five published books,
+Author site for Kelly deVos, contemporary & horror writer (repositioned 2026-10 per
+Kelly: her next book is adult) with five published YA books (
 2018–2022, Harlequin Teen / Inkyard Press / Penguin Teen–Razorbill). The site
 exists to present the books, the author, and the ways to reach her — and to
 look like the work of a working novelist, not a 2018 theme.
@@ -54,7 +55,9 @@ stories" is a recurring press angle and genuine differentiator.
 - Buy links per book (Amazon, B&N, Book Depository, Changing Hands, Indigo,
   IndieBound) exist in the old my-books page and must carry over.
 - Press/media list exists on old /media/ page; agency contact is factual:
-  Kristina Pérez, Zeno Literary Agency, London — perez@zenoagency.com.
+  Kristina Pérez, PhD (Cantab), Managing Director, Pérez Literary & Entertainment Ltd.,
+  49 Greek Street, London W1D 4EG — www.perezliterary.com (agency changed 2026-10;
+  no agency email published yet).
 
 ## Brand Commitments
 

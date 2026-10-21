@@ -121,7 +121,7 @@ white/gray/black bands plus enormous Caslon.
   attributions, footer text — on light surfaces only.
 - **Silver on Black** (#b5b5b5): the mid-gray role when it sits on a black
   band (labels, publisher years on the home shelf).
-- **Hero Whisper** (#e6e3de): the tracked "young adult novelist" line on the
+- **Hero Whisper** (#e6e3de): the tracked "contemporary & horror writer" line on the
   hero photo; slightly warm so it doesn't glare against the grayscale plate.
 
 Hairline rules are translucent ink, not a token: `#00000014`–`#00000033`

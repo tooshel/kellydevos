@@ -221,7 +221,7 @@ const NAV = (cur) => `<nav class="site" aria-label="Site">
 const FOOTER = () => `<footer class="site">
   <div class="measure reveal">
     <span>&copy; ${new Date().getFullYear()} Kelly deVos</span>
-    <span>Represented by <a href="https://zenoagency.com/">Zeno Literary Agency</a>, London</span>
+    <span>Represented by <a href="https://www.perezliterary.com/">P&eacute;rez Literary &amp; Entertainment</a>, London</span>
     <span>${SOCIALS.map(([n, u]) => `<a href="${u}">${n}</a>`).join(' &nbsp; ')}</span>
     ${CFG.photoCredit ? `<span>Author photography by ${esc(CFG.photoCredit)}</span>` : ''}
   </div>
@@ -290,7 +290,7 @@ const home = `
   <div class="scrim"></div>
   <div class="title">
     <h1>Kelly deVos</h1>
-    <p>young adult novelist</p>
+    <p>contemporary &amp; horror writer</p>
   </div>
   <a class="cue" href="#hello" aria-label="Scroll to introduction">&darr;</a>
 </header>
@@ -337,8 +337,8 @@ ${newsletterBand}
 `;
 
 fs.writeFileSync(path.join(OUT, 'index.html'), page({
-  title: 'Kelly deVos — young adult novelist', pathname: '/',
-  desc: 'Kelly deVos writes sharp, funny young adult novels: Fat Girl on a Plane, the Day Zero duology, Eat Your Heart Out, and Go Hunt Me.',
+  title: 'Kelly deVos — contemporary & horror writer', pathname: '/',
+  desc: 'Kelly deVos writes sharp, funny contemporary and horror fiction, including Fat Girl on a Plane, the Day Zero duology, Eat Your Heart Out, and Go Hunt Me.',
   body: home, cur: 'home', hero: true,
 }));
 
@@ -362,8 +362,8 @@ const about = `
       review from ALA Booklist, was named an Amazon Best of YA Editor&rsquo;s Pick, and
       is a Georgia Peach Book Award nominee. Her most recent novel is the
       Dracula-inspired <em>Go Hunt Me</em>, out now from Penguin Teen / Razorbill.</p>
-      <p>Kelly is represented by Kristina P&eacute;rez of the
-      <a href="https://zenoagency.com/">Zeno Literary Agency</a> in London.</p>
+      <p>Kelly is represented by Kristina P&eacute;rez of
+      <a href="https://www.perezliterary.com/">P&eacute;rez Literary &amp; Entertainment</a> in London.</p>
       ${CFG.photoCredit ? `<p class="label" style="margin-top:2rem">Author photography by ${esc(CFG.photoCredit)}</p>` : ''}
     </div>
   </div>
@@ -375,7 +375,7 @@ const about = `
 fs.mkdirSync(path.join(OUT, 'about'), { recursive: true });
 fs.writeFileSync(path.join(OUT, 'about/index.html'), page({
   title: 'About — Kelly deVos', pathname: '/about/',
-  desc: 'Kelly deVos: Arizona novelist, body-positivity essayist, author of five young adult novels.',
+  desc: 'Kelly deVos: Arizona writer of contemporary fiction and horror, and body-positivity essayist.',
   body: about, cur: 'about',
 }));
 
@@ -468,8 +468,9 @@ const contact = `
       <div>
         <h2>Rights &amp; professional inquiries</h2>
         <ul>
-          <li>Kristina P&eacute;rez, <a href="https://zenoagency.com/">Zeno Literary Agency</a>, London</li>
-          <li><a href="mailto:perez@zenoagency.com">perez@zenoagency.com</a></li>
+          <li>Kristina P&eacute;rez, PhD (Cantab), Managing Director</li>
+          <li><a href="https://www.perezliterary.com/">P&eacute;rez Literary &amp; Entertainment</a> Ltd.</li>
+          <li>49 Greek Street, London W1D 4EG</li>
         </ul>
       </div>
     </div>
@@ -479,7 +480,7 @@ const contact = `
 fs.mkdirSync(path.join(OUT, 'contact-me'), { recursive: true });
 fs.writeFileSync(path.join(OUT, 'contact-me/index.html'), page({
   title: 'Contact — Kelly deVos', pathname: '/contact-me/',
-  desc: 'Reach Kelly deVos on social media, or contact Zeno Literary Agency for rights and professional inquiries.',
+  desc: 'Reach Kelly deVos on social media, or contact Pérez Literary & Entertainment for rights and professional inquiries.',
   body: contact, cur: 'contact',
 }));
 
